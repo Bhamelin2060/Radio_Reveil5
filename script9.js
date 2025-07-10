@@ -395,7 +395,10 @@ if(hh==23 && mn==0){
   Fond_Montre.style.backgroundImage="url('Ciel_etoile.jpg')";
   Fond_Champ_Alarme.style.backgroundImage="url('Ciel_etoile.jpg')";
 }
-
+if(hh==7 && mn==0){
+   Fond_Montre.style.backgroundImage="url('Bles.jpg')";
+  Fond_Champ_Alarme.style.backgroundImage="url('Bles.jpg')";
+}
 
 
 
