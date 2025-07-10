@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       
+      
+      <!-- <link rel="stylesheet" href="css/main.min.css"/>-->
+      <link rel="stylesheet" href="style9.css"/>
+      <title>test-heures version 10</title>
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  <!-- lien vers icones google :-->
+  
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+ 
+    </head>
+
+ 
+<body> 
+        
+<header>       
+<h1> CALENDRIER </h1>
+<p  id="Fetedujour"></p> 
+</header>
+            <section class="colonne">
+			 
+<main> 
+  
+<section id="Clock">
+    <p id="Date_du_jour"></p>
+    <p id="HeureActuelle"></p>
+</section>
+<div class="my-form">
+
+
+<section class="ligne"  id="fond_montre">
+	<div id="Montre">
+		<div id="Rond"> </div>
+		<div id="G_aiguille"> </div>
+		<div id="P_aiguille"> </div>
+		<div id="Sec_aiguille"> </div>
+	</div>
+	<div class="Bouton_chx_Horloge">
+	<button id="Btn_SNCF" class="Btn_h SNCF"> </button> 
+	<button id="Btn_Bben" class="Btn_h Big_ben"> </button> 
+	<button id="Btn_BbenT1" class="Btn_h Big_ben_T1"> </button>
+	<button id="Cadran1" class="Btn_h Cadran1"> </button>
+	</div>
+</section>	
+<!-- Initialisation timing sleep -->
+<section id="Salarme">
+	<div id="Champs_alarm">
+		<label for="radio_sleep">Choix radio sommeil</label><br />
+		<div class="cph">
+    			<p class="Titre_alarm">Sleep</p>
+			    
+    			<div id="Sleep">
+					<button id="moins10" class="push"> - </button>
+					<p id="Durée_SLEEP"></p>
+				   <button id="plus10"class="push"> + </button>
+				</div>
+	
+		<form method="post" action="traitement.php">
+   <p>
+    <!-- Initialisation liste radio -->   
+       <select name="radio_sleep" id="RadioS">
+           <option value="France Inter">France Inter</option>
+           <option value="Europe 1">Europe 1</option>
+           <option value="M Radio">M Radio</option>
+           <option value="Radio Classique">Radio Classique</option>
+           <option value="RTL">RTL</option>
+           <option value="FIP">FIP</option>
+           <option value="France Musique">France Musique</option>
+           <option value="ANCIENT">ANCIENT</option>
+		   <option value="CROONER">CROONER</option>
+       </select>
+   </p>
+   
+</form>
+<button class="Bt_stop" id="BoutonS">S</button> 
+				   </select>
+				  </form>
+</div>
+
+<!-- Initialisation section réveil --> 
+		<div class="cph">
+				<p class="Titre_alarm"> Reveil</p>
+    			
+    			<input class="heure-alarm" id="alarme1" type="time">  <!-- Heure alarm 1-->
+    			<p id="sonnerie1"></p> <!-- voyant sonnerie1-->
+				<form method="post" action="traitement.php">
+					<select name="radio_reveil"id="RadioR">
+						<option value="France Inter">France Inter</option>
+           				<option value="Europe 1">Europe 1</option>
+           				<option value="M Radio">M Radio</option>
+           				<option value="Radio Classique">Radio Classique</option>
+     					<option value="RTL">RTL</option>
+           				<option value="FIP">FIP</option>
+           				<option value="France Musique">France Musique</option>
+           				<option value="ANCIENT">ANCIENT</option>
+		   				<option value="CROONER">CROONER</option>
+				   </select>
+				  </form>
+		
+		<button class="Bt_stop" id="BoutonALon">On</button> 
+		<button class="Bt_stop" id="BoutonALoff">Off</button>
+	</div>
+	<section class="SJour-sem">
+		<button class="jour_sem" id="Lu">Lu</button> 
+		<button class="jour_sem" id="Ma">Ma</button>
+		<button class="jour_sem" id="Me">Me</button>
+		<button class="jour_sem" id="Je">Je</button>
+		<button class="jour_sem" id="Ve">Ve</button>
+		<button class="jour_sem" id="Sa">Sa</button>
+		<button class="jour_sem" id="Di">Di</button>
+	</section>
+	<section class="H_Alarm_sem">
+		<p class="heure_Alarm_j" id="H_Lu">Lu</p> 
+		<p class="heure_Alarm_j" id="H_Ma">Ma</p>
+		<p class="heure_Alarm_j" id="H_Me">Me</p>
+		<p class="heure_Alarm_j" id="H_Je">Je</p>
+		<p class="heure_Alarm_j" id="H_Ve">Ve</p>
+		<p class="heure_Alarm_j" id="H_Sa">Sa</p>
+		<p class="heure_Alarm_j" id="H_Di">Di</p>
+	</section>
+  <section class="Bouton_Gestio_Son">
+	<p id="Vol_son">.</p> <!--Valeur numérique du niveau du son-->
+	<input  id="slider" type="range"  min="0" max="10" step="1" value="50" ></input>  <!--Curseur du niveau du son-->
+ 	<button id="Pause" class="control_Play_stop" onclick="play('MonPlayer', this)"></button><!--Bouton pause-->
+     
+   
+  </section>
+
+ <audio id="MonPlayer" preload="none" tabindex="0" controls ></audio>
+ 	 
+ 
+
+
+<script src="script9.js"></script>
+</main>

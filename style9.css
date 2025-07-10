@@ -1,0 +1,510 @@
+/* OUKIEL C18 PRO 1600 x 720 pc*/
+:root{--Diam_Cadran:200px;} 
+body {
+    display: flex;
+   flex-wrap:wrap;
+   flex-direction:column;
+    background-color: rgb(158, 165, 194);
+   border:1px red;	
+    color: #EEE;
+    font-family: 'Roboto Slab', serif;
+   height:20%;
+   width:100%;
+  Max-width:720px; 
+  margin:auto; 
+ /*padding:10px;*/
+  }
+header{ 
+ 
+height:10%;
+color:rgb(24, 245, 179);
+align-items: center;
+text-align:center;
+background-color:rgb(116, 29, 101);
+ 
+ 
+
+}
+main{
+display: flex;
+flex-direction:column;
+width:100%;
+height:50%;
+}
+p{
+padding:5px;
+margin:5px;
+} 
+.colonne{
+display:flex;
+flex-direction:row;
+}
+#Montre{
+position:relative;
+width:var(--Diam_Cadran) ;
+height:var(--Diam_Cadran) ;
+border-radius:50%;
+flex-direction:column;
+padding:5px;
+margin-left:5px;
+border:2px ridge #202040;
+
+background-image: url("Horloge_SNCF.jpg");
+
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+box-shadow: 5px 5px 0px 0px rgba(17, 126, 111, 0.2);
+      
+}
+/*-----------------Grange aiguille------------------------*/
+#G_aiguille{
+position:absolute;
+top:Calc(var(--Diam_Cadran)*0.1); 
+left:calc(var(--Diam_Cadran)*0.49); 
+height:calc(var(--Diam_Cadran)*0.54);
+width:15px;
+transform-origin:50% 80%;
+rotate:00deg;
+background-image: url("Grande_Aiguille_SNCF.png");
+background-repeat: no-repeat;
+background-position: center; 
+background-size: cover;
+/*box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);*/
+}
+
+/*-----------------Petite aiguille------------------------*/
+#P_aiguille{
+position:absolute;
+top:Calc(var(--Diam_Cadran)*0.24); 
+left:calc(var(--Diam_Cadran)*0.5); 
+height:calc(var(--Diam_Cadran)*0.45);
+width:15px;
+transform-origin:32% 68%;
+rotate:00deg;
+background-image: url("Grande_Aiguille_SNCF.png");
+background-repeat: no-repeat;
+background-position: center; 
+background-size: cover;
+/*box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
+ 
+}
+/*-----------------Trotteuse----------------------*/
+#Sec_aiguille{
+ position:absolute;
+top:Calc(var(--Diam_Cadran)*0.22); 
+left:calc(var(--Diam_Cadran)*0.50); 
+height:calc(var(--Diam_Cadran)*0.40);
+width:5px;
+transform-origin:50% 80%;
+rotate:00deg;
+background-image: url("Trotteuse_SNCF.png");
+ background-repeat: no-repeat;
+background-position: center; 
+background-size: cover;
+/* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
+
+
+}
+#Rond{
+  position:absolute;
+  top:Calc(var(--Diam_Cadran)*0.48);/*+"px";  95px;*/
+  left:Calc(var(--Diam_Cadran)*0.48);/*+"px"; 5px;*/
+  z-index: 10;
+  width: Calc(var(--Diam_Cadran)*0.1);/*+"px";*/ 
+  height:Calc(var(--Diam_Cadran)*0.1);/*+"px";*/ 
+  border-radius:50% 50% 50% 50%;
+  border:1px ridge #F9FF18; /* RGB(0,100,255);*/
+  background-color:#F9FF18;/* #F9FF18; */
+  }
+
+
+
+
+
+.ligne{
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:5px;
+margin-left:5px;
+border:2px ridge #202040;
+width:45%;
+background-image: url("bles.jpg");
+}
+
+.ligne_inf{
+
+width:90%;
+margin:10% 10% 10% 10%;;
+border:2px ridge #202040;
+}
+.my-form {
+display:flex;
+flex-direction:row;
+flex-wrap: wrap;
+
+padding: 20px;
+border:5px double #c12629;
+background-color: #bad;
+}
+#Clock{
+display:flex;
+flex-direction:row;
+width: 100%;
+}
+#Date_du_jour{
+font-size:32px;
+color:blue;
+width:70%;
+}
+ #HeureActuelle{
+    font-size:32px;
+    color:blue;
+	width:30%;
+  }
+.heure-alarm{
+color:#EEE;
+background-color:rgb(41, 111, 137);
+}
+.MonAge{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+  padding:10px;
+margin:4% 0% 4% 0%;
+ 
+  background-color: cadetblue;
+width:100%;
+  }
+  #résultat_final{
+    display:flex;
+flex-wrap:wrap;
+    flex-direction: row;
+    align-items: center;
+
+  }
+.champs{
+    display:flex;
+flex-wrap:wrap;
+    width:100%;
+    
+    flex-direction: row;
+    padding: 5px;
+  }
+
+.data{
+width:50px;
+}
+.label{
+width:150px;
+}
+  #calculate-button2{
+    width:80px;
+    height:30px;
+    border-radius: 2px;
+    background-color: aqua;
+  }
+  .res{
+    margin: 5px;
+  }
+ 
+  #Mois_input{
+    width:30px;
+  }
+  #List_Mois{
+    width:100px;
+  }
+#anni{
+opacity:0;
+font-size:30px;
+}
+#heure{
+width:75px;
+}
+#sonnerie1{
+height:10px;
+width:10px;
+font-size: 1px; 
+background-color:#fc0612;
+border-radius:10px; 
+}
+
+#Champs_alarm{
+display:flex;
+flex-direction: column;
+max-width: 100%;
+}
+.cph{
+display: flex;
+flex-direction: row;
+align-items: center;
+}	
+#Salarme{
+border:5px ridge #402040;
+background-color: rgb(41, 111, 137);
+width:50%;
+}	
+
+.Bt_stop{
+ height:25px;
+ width:25px;
+ background-color: rgb(197, 194, 169);
+ border-radius:12px ;
+ font-size: 10px;
+ padding-left: 4px;
+}
+.Bouton_chx_Horloge{
+Display:flex;
+width:80%;
+height:0;
+border:1px ridge #402040;
+margin:2% 0% 2% 0%;
+opacity:0;
+}
+.Bouton_chx_Horloge:hover{
+  height:auto;
+  opacity:1;
+} 
+ 
+.Btn_h{
+width:30px;
+height:30px;
+border:2px ridge #304040;
+margin:2% 0% 2% 0%;
+
+}
+.SNCF{
+border-radius:25% 25% 25% 25%;
+background-image: url("Horloge_SNCF.jpg");
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+margin-left: 20px;
+&:active{
+transform:scale(0.8);
+}
+}
+.Big_ben{
+border-radius:25% 25% 25% 25%;
+background-image: url("cadran_Big_Ben_T1.png");
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+margin-left: 20px;
+&:active{
+transform:scale(0.8);
+}
+}
+.Big_ben_T1{
+border-radius:25% 25% 25% 25%;
+background-image: url("Horloge_Big_ben1.png");
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+margin-left: 20px;
+&:active{
+transform:scale(0.8);
+}
+}
+.Cadran1{
+border-radius:25% 25% 25% 25%;
+background-image: url("Cadran_1.webp");
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+margin-left: 20px;
+&:active{
+transform:scale(0.8);
+}
+}
+/* ------------gestion curseur -----------*/
+input {
+  --c: rgb(87, 97, 230); /* active color */
+  --l: 8px; /* line thickness*/
+  --h: 30px; /* thumb height */
+  --w: 12px; /* thumb width */
+   
+  width: 25%;
+  height: var(--h); /* needed for Firefox*/
+  --_c: color-mix(in srgb, var(--c), #000 var(--p,0%));
+  -webkit-appearance :none;
+  -moz-appearance :none;
+  appearance :none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+input:focus-visible,
+input:hover{
+  --p: 25%;
+}
+
+/* chromium */
+input[type="range" i]::-webkit-slider-thumb{
+  height: var(--h);
+  width: var(--w);
+  border-radius:15px;
+  background: var(--_c);
+  border-image: linear-gradient(90deg,var(--_c) 50%,#940909 0) 1/0 100vw/0 100vw;
+  clip-path:
+    polygon(
+       0     calc(50% + var(--l)/2),
+      -100vw calc(50% + var(--l)/2),
+      -100vw calc(50% - var(--l)/2),
+       0     calc(50% - var(--l)/2),
+       0 0,100% 0,
+       100%  calc(50% - var(--l)/2),
+       100vw calc(50% - var(--l)/2),
+       100vw calc(50% + var(--l)/2),
+       100%  calc(50% + var(--l)/2),
+       100% 100%,0 100%);
+  -webkit-appearance: none;
+  appearance: none;
+  transition: .3s;
+}
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: var(--h);
+  width: var(--w);
+  background: var(--_c);
+  border-radius:var(--br);
+  border-image: linear-gradient(90deg,var(--_c) 50%,#97084f 0) 1/0 100vw/0 100vw;
+  clip-path:
+    polygon(
+       0     calc(50% + var(--l)/2),
+      -100vw calc(50% + var(--l)/2),
+      -100vw calc(50% - var(--l)/2),
+       0     calc(50% - var(--l)/2),
+       0 0,100% 0,
+       100%  calc(50% - var(--l)/2),
+       100vw calc(50% - var(--l)/2),
+       100vw calc(50% + var(--l)/2),
+       100%  calc(50% + var(--l)/2),
+       100% 100%,0 100%);
+  -webkit-appearance: none;
+  appearance: none;
+  transition: .3s;
+}
+.control_Play_stop{
+ height:30px;
+ width:30px;
+ background-color: rgb(95, 212, 3);
+ border-radius:15px ;
+ font-size: 100%;
+ margin-left: 2%; 
+ padding-bottom: 4px;
+box-shadow: 10px 10px 15px rgb(95, 75, 173);
+
+}
+.control_Play_stop:active{
+  box-shadow: 3px 3px 5px rgb(95, 75, 173);
+ transform: scale(0.8);
+}
+@supports not (color: color-mix(in srgb,red,red)) {
+  input {
+    --_c: var(--c);
+  } 
+}
+@media screen and (min-width: 769px) {
+  body { /*desktop */
+    width: 900px;
+    margin: auto;
+  }
+  .banniere_image {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width:740px){
+.ligne{
+width:100%;
+background-image: url("bles.jpg");
+}
+#Salarme{
+ 
+width:100%;
+
+}
+#List_Radio{
+  width:80px;
+}
+#sleep{
+  width:60px;
+}
+}
+.Titre_alarm{
+  width:60px;
+  height: 20px;
+}
+#Sleep{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#Durée_SLEEP{
+width:30px;
+padding-left: 5px;
+padding-right: 5px;
+ 
+text-align: center;
+}
+.push{
+  height:30px;
+  font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width:30px;
+  border-radius: 15px;
+  align-content: center;
+  background-color: cadetblue;
+}
+#MonPlayer{
+  width: 90%;
+  height:20px;
+  align-items: center;
+  
+  padding-top:50px;
+  padding-left:10px;
+  opacity:1;
+}
+.Volume{
+ height:30px;
+ width:30px;
+ background-color: rgb(45, 212, 3);
+ border-radius:12px ;
+ font-size: 150%;
+  
+ padding-bottom: 4px;
+}
+
+.Bouton_Gestio_Son{
+ display: flex;
+flex-direction: row;
+align-items: center;
+  
+}
+.SJour-sem{
+  margin-left: 10px;
+}
+.H_Alarm_sem{
+display:flex;
+flex-direction: row;
+ margin-left: 10px;
+
+}
+.heure_Alarm_j{
+font-size: 10px;
+width:30px;
+padding:0px;
+margin:2px;
+}
+.jour_sem{
+height:20px;
+width:30px;
+font-size: 10px;
+text-align:center;
+background-color: rgb(158, 153, 153);
+}
