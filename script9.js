@@ -113,7 +113,7 @@ const Vol_moins=document.getElementById("Volume_moins");
 // ---------------Init Big ben ----------------------
 Bigben_fond.addEventListener('click', () => {
 Rond_central.style.opacity=0;
-Cadran.style.backgroundImage="url('cadran_Big_Ben_T1.PNG')";
+Cadran.style.backgroundImage="url('cadran_Big_Ben_T1.png')";
 
 Aiguille_heure.style.opacity=1;
 Aiguille_heure.style.backgroundImage="url('Petite_Aiguille_Big_ben_Blanc.png')";
