@@ -432,7 +432,7 @@ var H_Alarmj=tab_alarm_sel[parseInt(js-1)]         // alarme programmée pour la
 
     // a revoir pour la selection de la radio du reveil
    // var trackUrl_R=Tab_radio[select_Elt_Radio.selectedIndex][1]
-var trackUrl_R=Tab_radio[tab_radio_alarm_sel[Js-1]][1];
+var trackUrl_R=Tab_radio[tab_radio_alarm_sel[js-1]][1];
 
     initAudio (trackUrl_R)
 }
