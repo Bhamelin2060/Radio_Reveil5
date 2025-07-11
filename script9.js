@@ -11,11 +11,15 @@ var dd = String(today.getDate()).padStart(2, '0');       // Date actuelle
 var js= String(today.getDay()).padStart(2, '0')// jour de la semaine
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //Mois actuel January is 0!
 var yyyy = today.getFullYear();                         // Année actuelle
-var hh=0;
-var mn=0;
-var ss=0;
+ var hh=0;
+ var mn=0;
+ var ss=0;
+// affiche l'heure courante toute les secondes:
+
+
 let tab_alarm_sel=[0,0,0,0,0,0,0,]; // mise a zero des heures d'alarme du lundi au dimanche
 let tab_statut_alarm_sel=[0,0,0,0,0,0,0,]; // mise a zero autorisation d'alarme du lundi au dimanche
+let tab_radio_alarm_sel=["","","","","","",""];
 // Gestion du son
 let Son = document.getElementById('MonPlayer');
 Son.volume=0.4;
@@ -95,6 +99,20 @@ H_Je=document.getElementById("H_Je");
 H_Ve=document.getElementById("H_Ve");
 H_Sa=document.getElementById("H_Sa");
 H_Di=document.getElementById("H_Di");
+//===============Déclaration Radio alarme journalie =============
+R_Lu=document.getElementById("R_Lu");
+R_Ma=document.getElementById("R_Ma");
+R_Me=document.getElementById("R_Me");
+R_Je=document.getElementById("R_Je");
+R_Ve=document.getElementById("R_Ve");
+R_Sa=document.getElementById("R_Sa");
+R_Di=document.getElementById("R_Di");
+
+RadioR=document.getElementById('RadioR'); // nom de radio sélectionée pour lalarme
+// ============ Initiale le fon d'écran =========================
+
+
+
 //============== Initialise les aiguilles ============================
 const Cadran=document.getElementById("Montre");
 const Rond_central=document.getElementById("Rond");
@@ -113,31 +131,31 @@ const Vol_moins=document.getElementById("Volume_moins");
 // ---------------Init Big ben ----------------------
 Bigben_fond.addEventListener('click', () => {
 Rond_central.style.opacity=0;
-Cadran.style.backgroundImage="url('cadran_Big_Ben_T1.png')";
+Cadran.style.backgroundImage="url('cadran_Big_Ben_T1.PNG')";
 
 Aiguille_heure.style.opacity=1;
-Aiguille_heure.style.backgroundImage="url('Petite_Aiguille_Big_ben_Blanc.png')";
-Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_Big_ben_Blanc.png')";
-Aiguille_seconde.style.backgroundImage="url('Trotteuse_Big_Ben_Blanc.png')";
+Aiguille_heure.style.backgroundImage="url('Petite_Aiguille_Big_ben_Blanc.PNG')";
+Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_Big_ben_Blanc.PNG')";
+Aiguille_seconde.style.backgroundImage="url('Trotteuse_Big_Ben_Blanc.PNG')";
 
 });
 // ---------------Init Big ben T1 ----------------------
 Bigben_fondT1.addEventListener('click', () => {
 Rond_central.style.opacity=0;
-Cadran.style.backgroundImage="url('cadran_Big_Ben.png')";
+Cadran.style.backgroundImage="url('cadran_Big_Ben.PNG')";
 
 Aiguille_heure.style.opacity=1;
-Aiguille_heure.style.backgroundImage="url('Petite_Aiguille_Big_ben.png')";
-Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_Big_ben.png')";
-Aiguille_seconde.style.backgroundImage="url('Trotteuse_Big_Ben.png')";
+Aiguille_heure.style.backgroundImage="url('Petite_Aiguille_Big_ben.PNG')";
+Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_Big_ben.PNG')";
+Aiguille_seconde.style.backgroundImage="url('Trotteuse_Big_Ben.PNG')";
 
 });
 // ----------------------- Init SNCF--------------------
 Sncf_fond.addEventListener('click', () => {
 Rond_central.style.opacity=1;
 Cadran.style.backgroundImage="url('Horloge_SNCF.jpg')";
-Aiguille_heure.style.backgroundImage="url('Grande_Aiguille_SNCF.png')";
-Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_SNCF.png')";
+Aiguille_heure.style.backgroundImage="url('Grande_Aiguille_SNCF.PNG')";
+Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_SNCF.PNG')";
 Aiguille_seconde.style.backgroundImage="url('Trotteuse_SNCF.png')";
 });
 // ---------------Init Cadran1 ----------------------
@@ -146,8 +164,8 @@ Rond_central.style.opacity=0;
 Cadran.style.backgroundImage="url('cadran_1.png')";
 
 Aiguille_heure.style.opacity=1;
-Aiguille_heure.style.backgroundImage="url('Petite_Aiguille_Cadran1.png')";
-Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_Cadran1.png')";
+Aiguille_heure.style.backgroundImage="url('Petite_Aiguille_Cadran1.PNG')";
+Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_Cadran1.PNG')";
 Aiguille_seconde.style.backgroundImage="url('Trotteuse_Cadran1.png')";
 
 });
@@ -212,6 +230,8 @@ Al_Lu.addEventListener("click",(e)=>{
     tab_statut_alarm_sel[0]=1;
     Sonnerie1.innerText=1;
     Sonnerie1.style.opacity=1; // VERT
+    tab_radio_alarm_sel[0]=RadioR.selectedIndex;
+   R_Lu.innerText=RadioR.value
 }
  else
     { 
@@ -229,6 +249,8 @@ Al_Ma.addEventListener("click",(e)=>{
     tab_statut_alarm_sel[1]=1;
     Sonnerie1.innerText=1;
     Sonnerie1.style.opacity=1; // VERT
+    tab_radio_alarm_sel[1]=RadioR.selectedIndex;
+    R_Ma.innerText=RadioR.value
 } 
  else
     { 
@@ -247,6 +269,8 @@ Al_Me.addEventListener("click",(e)=>{
      tab_statut_alarm_sel[2]=1;
      Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VERT
+    tab_radio_alarm_sel[2]=RadioR.selectedIndex;
+     R_Me.innerText=RadioR.value
     }
  else
     { 
@@ -264,6 +288,8 @@ Al_Je.addEventListener("click",(e)=>{
      tab_statut_alarm_sel[3]=1;
      Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VER
+     tab_radio_alarm_sel[3]=RadioR.selectedIndex;
+     R_Je.innerText=RadioR.value
 }
  else
     { 
@@ -280,6 +306,8 @@ Al_Ve.addEventListener("click",(e)=>{
     tab_statut_alarm_sel[4]=1;
     Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VER
+     tab_radio_alarm_sel[4]=RadioR.selectedIndex;
+     R_Ve.innerText=RadioR.value
   }
  else
     { 
@@ -297,6 +325,8 @@ Al_Sa.addEventListener("click",(e)=>{
      tab_statut_alarm_sel[5]=1;
      Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VER
+     tab_radio_alarm_sel[5]=RadioR.selectedIndex; 
+     R_Sa.innerText=RadioR.value
   }
  else
     { 
@@ -314,6 +344,8 @@ Al_Di.addEventListener("click",(e)=>{
     tab_statut_alarm_sel[6]=1;
     Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VER
+     tab_radio_alarm_sel[6]=RadioR.selectedIndex;
+     R_Di.innerText=RadioR.value
    }
     
  else
@@ -340,7 +372,7 @@ Al_Di.addEventListener("click",(e)=>{
 //===============================================Mise en route de la scrutation ================================
 //================================================================================================================
 
-setInterval(myTimer, 500); // défini un interval de temps pour rafraichir la fonction myTimer toute les 1000 ms
+setInterval(myTimer, 1000); // défini un interval de temps pour rafraichir la fonction myTimer toute les 1000 ms
 function myTimer() {
   let mois=Tabmois[parseInt(mm-1)];         // parseInt transforme un objet texte en valeur numérique et recherche dans la table le mois en lettres
   var aujourdhui = dd+" "+ mois +" "+yyyy;  // date du jour au format jj/mois/année
@@ -348,16 +380,26 @@ function myTimer() {
   Date_du_jour.innerText=`${aujourdhui}`;
 //================= Affiche l'heure actuelle ================================
 F_Sleep_radio(Durée_S_sleep)
-
+const date = new Date();
+document.getElementById("HeureActuelle").innerHTML = date.toLocaleTimeString();
+  hh= date.getHours();       // heure actuelle
+  mn= date.getMinutes();       // minuteactuelle
+  ss= date.getSeconds();       // minuteactuelle
+//--------- mise a jout fond ecran -------------------
+  if(hh==23 || (hh>=0 && hh<7)){
+ 
+  Fond_Montre.style.backgroundImage="url('Ciel_etoile.jpg')";
+  Fond_Champ_Alarme.style.backgroundImage="url('Ciel_etoile.jpg')";
+}
+else{
+   Fond_Montre.style.backgroundImage="url('Bles.jpg')";
+  Fond_Champ_Alarme.style.backgroundImage="url('Bles.jpg')";
+}
 // affiche l'heure courante toute les secondes:
 
-	const date = new Date();
-	document.getElementById("HeureActuelle").innerHTML = date.toLocaleTimeString();
-	var hh=  date.getHours();       // heure actuelle
-	var mn= date.getMinutes();       // minuteactuelle
-	var ss= date.getSeconds();       // minuteactuelle 
-	// console.log("l'heure est:"+hh +"minute:"+ mn+"seconde:"+ ss);
-// console.log(360*(ss/60));
+	//const date = new Date();
+	 document.getElementById("HeureActuelle").innerHTML = date.toLocaleTimeString();
+	
 	 Aiguille_seconde.style.webkitTransform = "rotateZ("+parseInt(360*(ss/60))+"deg)";
 	 Aiguille_minute.style.webkitTransform ="rotateZ("+parseInt(360*(mn/60))+"deg)";
  	 if (hh>=12){
@@ -383,9 +425,15 @@ var H_Alarmj=tab_alarm_sel[parseInt(js-1)]         // alarme programmée pour la
   
 	if (hh==parseInt(H_Alarmj.substring(0,2)) && mn==parseInt(H_Alarmj.substring(5,3)) && ss==0 && tab_statut_alarm_sel[parseInt(js-1)]==1){
 	Sonnerie1.style.backgroundColor="RGB(100,241,39)"; // VERT
+
+
    var select_Elt_Radio=document.getElementById('RadioR');
     var valeurselectionnee_Radio = select_Elt_Radio.options[select_Elt_Radio.selectedIndex].value;  
-    var trackUrl_R=Tab_radio[select_Elt_Radio.selectedIndex][1]
+
+    // a revoir pour la selection de la radio du reveil
+   // var trackUrl_R=Tab_radio[select_Elt_Radio.selectedIndex][1]
+var trackUrl_R=Tab_radio[tab_radio_alarm_sel[J-1]][1];
+
     initAudio (trackUrl_R)
 }
 // -----------fonction cadran de nuit-------------- 
@@ -403,7 +451,7 @@ if(hh==7 && mn==0){
 
 
 
-}  // fin fonctionTimer
+}  // ---------------------------- fin fonctionTimer -----------------------------------------
 	
 		if(Nbgong>0){
 			      
@@ -417,7 +465,12 @@ if(hh==7 && mn==0){
 //--------------  Fonction sleep avec radio -----------------//
 //----------------------------------------------------------//
 function F_Sleep_radio(Durée_S_sleep){
+   if (ss==0){
+     
+    Durée_SLEEP.innerText= Durée_SLEEP.innerText-1
+   }
        setTimeout(Tempo_Sleep, Durée_S_sleep*60000); //60000
+
 };
 
 function Tempo_Sleep(){
