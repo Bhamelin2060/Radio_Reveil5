@@ -131,31 +131,31 @@ const Vol_moins=document.getElementById("Volume_moins");
 // ---------------Init Big ben ----------------------
 Bigben_fond.addEventListener('click', () => {
 Rond_central.style.opacity=0;
-Cadran.style.backgroundImage="url('cadran_Big_Ben_T1.PNG')";
+Cadran.style.backgroundImage="url('cadran_Big_Ben_T1.png')";
 
 Aiguille_heure.style.opacity=1;
-Aiguille_heure.style.backgroundImage="url('Petite_Aiguille_Big_ben_Blanc.PNG')";
-Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_Big_ben_Blanc.PNG')";
-Aiguille_seconde.style.backgroundImage="url('Trotteuse_Big_Ben_Blanc.PNG')";
+Aiguille_heure.style.backgroundImage="url('Petite_Aiguille_Big_ben_Blanc.png')";
+Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_Big_ben_Blanc.png')";
+Aiguille_seconde.style.backgroundImage="url('Trotteuse_Big_Ben_Blanc.png')";
 
 });
 // ---------------Init Big ben T1 ----------------------
 Bigben_fondT1.addEventListener('click', () => {
 Rond_central.style.opacity=0;
-Cadran.style.backgroundImage="url('cadran_Big_Ben.PNG')";
+Cadran.style.backgroundImage="url('cadran_Big_Ben.png')";
 
 Aiguille_heure.style.opacity=1;
-Aiguille_heure.style.backgroundImage="url('Petite_Aiguille_Big_ben.PNG')";
-Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_Big_ben.PNG')";
-Aiguille_seconde.style.backgroundImage="url('Trotteuse_Big_Ben.PNG')";
+Aiguille_heure.style.backgroundImage="url('Petite_Aiguille_Big_ben.png')";
+Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_Big_ben.png')";
+Aiguille_seconde.style.backgroundImage="url('Trotteuse_Big_Ben.png')";
 
 });
 // ----------------------- Init SNCF--------------------
 Sncf_fond.addEventListener('click', () => {
 Rond_central.style.opacity=1;
 Cadran.style.backgroundImage="url('Horloge_SNCF.jpg')";
-Aiguille_heure.style.backgroundImage="url('Grande_Aiguille_SNCF.PNG')";
-Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_SNCF.PNG')";
+Aiguille_heure.style.backgroundImage="url('Grande_Aiguille_SNCF.png')";
+Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_SNCF.png')";
 Aiguille_seconde.style.backgroundImage="url('Trotteuse_SNCF.png')";
 });
 // ---------------Init Cadran1 ----------------------
@@ -164,8 +164,8 @@ Rond_central.style.opacity=0;
 Cadran.style.backgroundImage="url('cadran_1.png')";
 
 Aiguille_heure.style.opacity=1;
-Aiguille_heure.style.backgroundImage="url('Petite_Aiguille_Cadran1.PNG')";
-Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_Cadran1.PNG')";
+Aiguille_heure.style.backgroundImage="url('Petite_Aiguille_Cadran1.png')";
+Aiguille_minute.style.backgroundImage="url('Grande_Aiguille_Cadran1.png')";
 Aiguille_seconde.style.backgroundImage="url('Trotteuse_Cadran1.png')";
 
 });
