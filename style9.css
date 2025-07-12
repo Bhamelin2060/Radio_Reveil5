@@ -312,7 +312,7 @@ transform:scale(0.8);
 }
 .Cadran1{
 border-radius:25% 25% 25% 25%;
-background-image: url("Cadran_1.webp");
+background-image: url("cadran_1.webp");
 background-repeat: no-repeat;
 background-position: center center;
 background-size: cover;
