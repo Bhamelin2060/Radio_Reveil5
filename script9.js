@@ -465,7 +465,7 @@ if(hh==7 && mn==0){
 //--------------  Fonction sleep avec radio -----------------//
 //----------------------------------------------------------//
 function F_Sleep_radio(Durée_S_sleep){
-   if (ss==0){
+   if (ss==0 && Durée_SLEEP.innerText>1){
      
     Durée_SLEEP.innerText= Durée_SLEEP.innerText-1
    }
