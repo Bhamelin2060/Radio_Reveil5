@@ -95,7 +95,7 @@ background-size: cover;
 /*-----------------Trotteuse----------------------*/
 #Sec_aiguille{
  position:absolute;
-top:Calc(var(--Diam_Cadran)*0.22); 
+top:Calc(var(--Diam_Cadran)*0.21); 
 left:calc(var(--Diam_Cadran)*0.50); 
 height:calc(var(--Diam_Cadran)*0.40);
 width:5px;
