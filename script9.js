@@ -227,16 +227,16 @@ Al_Lu.addEventListener("click",(e)=>{
      Al_Lu.style.backgroundColor="rgb(25, 214, 8)";
     tab_alarm_sel[0]=Alarm1.value;
     H_Lu.innerText=tab_alarm_sel[0]
-    tab_statut_alarm_sel[0]=1;
+    tab_statut_alarm_sel[1]=1;
     Sonnerie1.innerText=1;
     Sonnerie1.style.opacity=1; // VERT
-    tab_radio_alarm_sel[0]=RadioR.selectedIndex;
+    tab_radio_alarm_sel[1]=RadioR.selectedIndex;
    R_Lu.innerText=RadioR.value
 }
  else
     { 
       Al_Lu.style.backgroundColor="rgb(158, 153, 153)";
-     tab_statut_alarm_sel[0]=0;
+     tab_statut_alarm_sel[1]=0;
 }
    
     //console.log("alarm :" ,tab_alarm_sel )
@@ -244,18 +244,18 @@ Al_Lu.addEventListener("click",(e)=>{
 Al_Ma.addEventListener("click",(e)=>{
  if (Al_Ma.style.backgroundColor=="rgb(158, 153, 153)") {
      Al_Ma.style.backgroundColor="rgb(25, 214, 8)";
-    tab_alarm_sel[1]=Alarm1.value;
+    tab_alarm_sel[2]=Alarm1.value;
     H_Ma.innerText=tab_alarm_sel[1]
-    tab_statut_alarm_sel[1]=1;
+    tab_statut_alarm_sel[2]=1;
     Sonnerie1.innerText=1;
     Sonnerie1.style.opacity=1; // VERT
-    tab_radio_alarm_sel[1]=RadioR.selectedIndex;
+    tab_radio_alarm_sel[2]=RadioR.selectedIndex;
     R_Ma.innerText=RadioR.value
 } 
  else
     { 
       Al_Ma.style.backgroundColor="rgb(158, 153, 153)";
-     tab_statut_alarm_sel[1]=0;
+     tab_statut_alarm_sel[2]=0;
     }
    
  //  console.log("alarm :" ,tab_alarm_sel )
@@ -264,18 +264,18 @@ Al_Ma.addEventListener("click",(e)=>{
 Al_Me.addEventListener("click",(e)=>{
  if (Al_Me.style.backgroundColor=="rgb(158, 153, 153)") {
      Al_Me.style.backgroundColor="rgb(25, 214, 8)";
-    tab_alarm_sel[2]=Alarm1.value;
+    tab_alarm_sel[3]=Alarm1.value;
      H_Me.innerText=tab_alarm_sel[2]
-     tab_statut_alarm_sel[2]=1;
+     tab_statut_alarm_sel[3]=1;
      Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VERT
-    tab_radio_alarm_sel[2]=RadioR.selectedIndex;
+    tab_radio_alarm_sel[3]=RadioR.selectedIndex;
      R_Me.innerText=RadioR.value
     }
  else
     { 
       Al_Me.style.backgroundColor="rgb(158, 153, 153)";
-     tab_statut_alarm_sel[2]=0;
+     tab_statut_alarm_sel[3]=0;
     
   }
   //console.log("alarm :" ,tab_alarm_sel )
@@ -283,36 +283,36 @@ Al_Me.addEventListener("click",(e)=>{
 Al_Je.addEventListener("click",(e)=>{
  if (Al_Je.style.backgroundColor=="rgb(158, 153, 153)") {
      Al_Je.style.backgroundColor="rgb(25, 214, 8)";
-    tab_alarm_sel[3]=Alarm1.value;
+    tab_alarm_sel[4]=Alarm1.value;
     H_Je.innerText=tab_alarm_sel[3]
-     tab_statut_alarm_sel[3]=1;
+     tab_statut_alarm_sel[4]=1;
      Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VER
-     tab_radio_alarm_sel[3]=RadioR.selectedIndex;
+     tab_radio_alarm_sel[4]=RadioR.selectedIndex;
      R_Je.innerText=RadioR.value
 }
  else
     { 
        Al_Je.style.backgroundColor="rgb(158, 153, 153)";
-    tab_statut_alarm_sel[3]=0;
+    tab_statut_alarm_sel[4]=0;
   }
  // console.log("alarm :" ,tab_alarm_sel )
 });
 Al_Ve.addEventListener("click",(e)=>{
  if (Al_Ve.style.backgroundColor=="rgb(158, 153, 153)") {
      Al_Ve.style.backgroundColor="rgb(25, 214, 8)";
-    tab_alarm_sel[4]=Alarm1.value;
+    tab_alarm_sel[5]=Alarm1.value;
     H_Ve.innerText=tab_alarm_sel[4]
-    tab_statut_alarm_sel[4]=1;
+    tab_statut_alarm_sel[5]=1;
     Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VER
-     tab_radio_alarm_sel[4]=RadioR.selectedIndex;
+     tab_radio_alarm_sel[5]=RadioR.selectedIndex;
      R_Ve.innerText=RadioR.value
   }
  else
     { 
       Al_Ve.style.backgroundColor="rgb(158, 153, 153)";
-    tab_statut_alarm_sel[4]=0;
+    tab_statut_alarm_sel[5]=0;
     
   }
 //  console.log("alarm :" ,tab_alarm_sel )
@@ -320,18 +320,18 @@ Al_Ve.addEventListener("click",(e)=>{
 Al_Sa.addEventListener("click",(e)=>{
  if (Al_Sa.style.backgroundColor=="rgb(158, 153, 153)") {
      Al_Sa.style.backgroundColor="rgb(25, 214, 8)";
-    tab_alarm_sel[5]=Alarm1.value;
+    tab_alarm_sel[6]=Alarm1.value;
      H_Sa.innerText=tab_alarm_sel[5];
-     tab_statut_alarm_sel[5]=1;
+     tab_statut_alarm_sel[6]=1;
      Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VER
-     tab_radio_alarm_sel[5]=RadioR.selectedIndex; 
+     tab_radio_alarm_sel[6]=RadioR.selectedIndex; 
      R_Sa.innerText=RadioR.value
   }
  else
     { 
       Al_Sa.style.backgroundColor="rgb(158, 153, 153)";
-    tab_statut_alarm_sel[5]=0;
+    tab_statut_alarm_sel[6]=0;
     
   }
  // console.log("alarm :" ,tab_alarm_sel );
@@ -339,7 +339,7 @@ Al_Sa.addEventListener("click",(e)=>{
 Al_Di.addEventListener("click",(e)=>{
  if (Al_Di.style.backgroundColor=="rgb(158, 153, 153)") {
      Al_Di.style.backgroundColor="rgb(25, 214, 8)";
-    tab_alarm_sel[6]=Alarm1.value;
+    tab_alarm_sel[0]=Alarm1.value;
     H_Di.innerText=tab_alarm_sel[6];
     tab_statut_alarm_sel[6]=1;
     Sonnerie1.innerText=1;
@@ -417,13 +417,13 @@ else{
  // ----------------------------test Alarme du jour ----------------------------
 var H_Alarme1=Alarm1.value;
 
-var H_Alarmj=tab_alarm_sel[parseInt(js-1)]         // alarme programmée pour la date du jour actuelle
+var H_Alarmj=tab_alarm_sel[parseInt(js)]         // alarme programmée pour la date du jour actuelle
 //console.log("Alarm_jour=",H_Alarmj)
 //console.log(parseInt(H_Alarmj.substring(0,2)))
-// console.log("Test=",hh==parseInt(H_Alarme1.substring(0,2)) && mn==parseInt(H_Alarme1.substring(5,3)) && ss==0  &&  tab_alarm_sel[parseInt(js-1)]==1)
-// console.log(hh==parseInt(H_Alarmj.substring(0,2)) && mn==parseInt(H_Alarmj.substring(5,3)) && ss==0 && tab_statut_alarm_sel[parseInt(js-1)]==1)
+// console.log("Test=",hh==parseInt(H_Alarme1.substring(0,2)) && mn==parseInt(H_Alarme1.substring(5,3)) && ss==0  &&  tab_alarm_sel[parseInt(js)]==1)
+// console.log(hh==parseInt(H_Alarmj.substring(0,2)) && mn==parseInt(H_Alarmj.substring(5,3)) && ss==0 && tab_statut_alarm_sel[parseInt(js)]==1)
   
-	if (hh==parseInt(H_Alarmj.substring(0,2)) && mn==parseInt(H_Alarmj.substring(5,3)) && ss==0 && tab_statut_alarm_sel[parseInt(js-1)]==1){
+	if (hh==parseInt(H_Alarmj.substring(0,2)) && mn==parseInt(H_Alarmj.substring(5,3)) && ss==0 && tab_statut_alarm_sel[parseInt(js)]==1){
 	Sonnerie1.style.backgroundColor="RGB(100,241,39)"; // VERT
 
 
@@ -432,7 +432,7 @@ var H_Alarmj=tab_alarm_sel[parseInt(js-1)]         // alarme programmée pour la
 
     // a revoir pour la selection de la radio du reveil
    // var trackUrl_R=Tab_radio[select_Elt_Radio.selectedIndex][1]
-var trackUrl_R=Tab_radio[tab_radio_alarm_sel[js-1]][1];
+var trackUrl_R=Tab_radio[tab_radio_alarm_sel[js]][1];
 
     initAudio (trackUrl_R)
 }
