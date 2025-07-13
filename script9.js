@@ -226,7 +226,7 @@ Al_Lu.addEventListener("click",(e)=>{
  if (Al_Lu.style.backgroundColor=="rgb(158, 153, 153)") {
      Al_Lu.style.backgroundColor="rgb(25, 214, 8)";
     tab_alarm_sel[1]=Alarm1.value;
-    H_Lu.innerText=tab_alarm_sel[0]
+    H_Lu.innerText=tab_alarm_sel[1]
     tab_statut_alarm_sel[1]=1;
     Sonnerie1.innerText=1;
     Sonnerie1.style.opacity=1; // VERT
@@ -245,7 +245,7 @@ Al_Ma.addEventListener("click",(e)=>{
  if (Al_Ma.style.backgroundColor=="rgb(158, 153, 153)") {
      Al_Ma.style.backgroundColor="rgb(25, 214, 8)";
     tab_alarm_sel[2]=Alarm1.value;
-    H_Ma.innerText=tab_alarm_sel[1]
+    H_Ma.innerText=tab_alarm_sel[2]
     tab_statut_alarm_sel[2]=1;
     Sonnerie1.innerText=1;
     Sonnerie1.style.opacity=1; // VERT
@@ -265,7 +265,7 @@ Al_Me.addEventListener("click",(e)=>{
  if (Al_Me.style.backgroundColor=="rgb(158, 153, 153)") {
      Al_Me.style.backgroundColor="rgb(25, 214, 8)";
     tab_alarm_sel[3]=Alarm1.value;
-     H_Me.innerText=tab_alarm_sel[2]
+     H_Me.innerText=tab_alarm_sel[3]
      tab_statut_alarm_sel[3]=1;
      Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VERT
@@ -284,7 +284,7 @@ Al_Je.addEventListener("click",(e)=>{
  if (Al_Je.style.backgroundColor=="rgb(158, 153, 153)") {
      Al_Je.style.backgroundColor="rgb(25, 214, 8)";
     tab_alarm_sel[4]=Alarm1.value;
-    H_Je.innerText=tab_alarm_sel[3]
+    H_Je.innerText=tab_alarm_sel[4]
      tab_statut_alarm_sel[4]=1;
      Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VER
@@ -302,7 +302,7 @@ Al_Ve.addEventListener("click",(e)=>{
  if (Al_Ve.style.backgroundColor=="rgb(158, 153, 153)") {
      Al_Ve.style.backgroundColor="rgb(25, 214, 8)";
     tab_alarm_sel[5]=Alarm1.value;
-    H_Ve.innerText=tab_alarm_sel[4]
+    H_Ve.innerText=tab_alarm_sel[5]
     tab_statut_alarm_sel[5]=1;
     Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VER
@@ -321,7 +321,7 @@ Al_Sa.addEventListener("click",(e)=>{
  if (Al_Sa.style.backgroundColor=="rgb(158, 153, 153)") {
      Al_Sa.style.backgroundColor="rgb(25, 214, 8)";
     tab_alarm_sel[6]=Alarm1.value;
-     H_Sa.innerText=tab_alarm_sel[5];
+     H_Sa.innerText=tab_alarm_sel[6];
      tab_statut_alarm_sel[6]=1;
      Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VER
@@ -340,7 +340,7 @@ Al_Di.addEventListener("click",(e)=>{
  if (Al_Di.style.backgroundColor=="rgb(158, 153, 153)") {
      Al_Di.style.backgroundColor="rgb(25, 214, 8)";
     tab_alarm_sel[0]=Alarm1.value;
-    H_Di.innerText=tab_alarm_sel[6];
+    H_Di.innerText=tab_alarm_sel[0];
     tab_statut_alarm_sel[0]=1;
     Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VER
