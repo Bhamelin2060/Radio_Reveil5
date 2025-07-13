@@ -393,7 +393,7 @@ document.getElementById("HeureActuelle").innerHTML = date.toLocaleTimeString();
 }
 else{
    Fond_Montre.style.backgroundImage="url('Bles.jpg')";
-  Fond_Champ_Alarme.style.backgroundImage="url('Bles.jpg')";
+  //Fond_Champ_Alarme.style.backgroundImage="url('Bles.jpg')";
 }
 // affiche l'heure courante toute les secondes:
 
