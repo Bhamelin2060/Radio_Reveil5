@@ -225,7 +225,7 @@ AlarmOFF.addEventListener("click",(e)=>{
 Al_Lu.addEventListener("click",(e)=>{
  if (Al_Lu.style.backgroundColor=="rgb(158, 153, 153)") {
      Al_Lu.style.backgroundColor="rgb(25, 214, 8)";
-    tab_alarm_sel[0]=Alarm1.value;
+    tab_alarm_sel[1]=Alarm1.value;
     H_Lu.innerText=tab_alarm_sel[0]
     tab_statut_alarm_sel[1]=1;
     Sonnerie1.innerText=1;
@@ -341,17 +341,17 @@ Al_Di.addEventListener("click",(e)=>{
      Al_Di.style.backgroundColor="rgb(25, 214, 8)";
     tab_alarm_sel[0]=Alarm1.value;
     H_Di.innerText=tab_alarm_sel[6];
-    tab_statut_alarm_sel[6]=1;
+    tab_statut_alarm_sel[0]=1;
     Sonnerie1.innerText=1;
      Sonnerie1.style.opacity=1; // VER
-     tab_radio_alarm_sel[6]=RadioR.selectedIndex;
+     tab_radio_alarm_sel[0]=RadioR.selectedIndex;
      R_Di.innerText=RadioR.value
    }
     
  else
     { 
       Al_Di.style.backgroundColor="rgb(158, 153, 153)";
-    tab_statut_alarm_sel[6]=0;
+    tab_statut_alarm_sel[0]=0;
     
   }
   // console.log("alarm :" ,tab_alarm_sel )
